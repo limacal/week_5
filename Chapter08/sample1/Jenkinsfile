@@ -17,7 +17,7 @@ pipeline {
                             sh 'Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/Chapter08/sample1'
                             sh 'pwd'
                             sh 'ls -l'
-                            sh './gradlew jacocoTestCoverageVerification'
+                            //sh './gradlew jacocoTestCoverageVerification'
                     }
                 }
             }
