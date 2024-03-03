@@ -2,12 +2,20 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
-            steps {
-                // Compile the Java code
-                sh 'mvn clean compile'
+        //stage('Build') {
+        //    steps {
+        //        // Compile the Java code
+        //        sh 'mvn clean compile'
+        //    }
+        //}
+        stage (Example) {
+            Steps {
+                script {
+                echo "THIS IS WEEK6 HOMEWORK!!!"            
+                }
             }
         }
+
         //stage('Test') {
         //    steps {
         //        Run tests with JaCoCo coverage enabled
