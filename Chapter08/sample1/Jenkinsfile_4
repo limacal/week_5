@@ -9,14 +9,15 @@ pipeline {
         //    }
         //}
         stage('Example') {
-            Steps {
-                steps {
-                    echo 'THIS IS WEEK6 HOMEWORK!!!'
+            steps {
+                script{
+                    echo "THIS IS WEEK6 HOMEWORK!!!"
                 }
             }
         }
+    }
 }
-        //stage('Test') {
+       //stage('Test') {
         //    steps {
         //        Run tests with JaCoCo coverage enabled
         //        sh 'mvn test jacoco:report'
@@ -28,7 +29,6 @@ pipeline {
 //        always {
             // Publish JaCoCo coverage report
 //            jacoco(execPattern: '**/target/jacoco.exec')
-            
             // Archive artifacts
 //            archiveArtifacts 'target/site/jacoco/index.html'
 //        }
