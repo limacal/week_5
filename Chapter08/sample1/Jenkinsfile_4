@@ -8,10 +8,10 @@ pipeline {
         //        sh 'mvn clean compile'
         //    }
         //}
-        stage (Example) {
+        stage ('Example') {
             Steps {
-                script {
-                echo "THIS IS WEEK6 HOMEWORK!!!"            
+                steps {
+                    echo "THIS IS WEEK6 HOMEWORK!!!"            
                 }
             }
         }
