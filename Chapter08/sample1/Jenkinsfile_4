@@ -4,7 +4,7 @@ pipeline {
     stages {
         //stage('Build') {
         //    steps {
-        //        // Compile the Java code
+        //        Compile the Java code
         //        sh 'mvn clean compile'
         //    }
         //}
@@ -15,7 +15,7 @@ pipeline {
                 }
             }
         }
-
+}
         //stage('Test') {
         //    steps {
         //        Run tests with JaCoCo coverage enabled
