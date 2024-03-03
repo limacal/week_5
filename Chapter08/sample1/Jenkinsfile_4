@@ -8,12 +8,12 @@ pipeline {
                 sh 'mvn clean compile'
             }
         }
-        stage('Test') {
-            steps {
-                // Run tests with JaCoCo coverage enabled
-                //sh 'mvn test jacoco:report'
-            }
-        }
+        //stage('Test') {
+        //    steps {
+        //        Run tests with JaCoCo coverage enabled
+        //        sh 'mvn test jacoco:report'
+        //    }
+        //}
     }
     
 //    post {
