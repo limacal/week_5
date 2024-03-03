@@ -8,10 +8,10 @@ pipeline {
         //        sh 'mvn clean compile'
         //    }
         //}
-        stage ('Example') {
+        stage('Example') {
             Steps {
                 steps {
-                    echo "THIS IS WEEK6 HOMEWORK!!!"            
+                    echo 'THIS IS WEEK6 HOMEWORK!!!'
                 }
             }
         }
@@ -33,4 +33,4 @@ pipeline {
 //            archiveArtifacts 'target/site/jacoco/index.html'
 //        }
 //    }
-}
+//}
