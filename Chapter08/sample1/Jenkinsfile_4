@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                // Compile the Java code
+                sh 'mvn clean compile'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Run tests with JaCoCo coverage enabled
+                sh 'mvn test jacoco:report'
+            }
+        }
+    }
+    
+//    post {
+//        always {
+            // Publish JaCoCo coverage report
+//            jacoco(execPattern: '**/target/jacoco.exec')
+            
+            // Archive artifacts
+//            archiveArtifacts 'target/site/jacoco/index.html'
+//        }
+//    }
+}
