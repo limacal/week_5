@@ -1,44 +1,6 @@
 pipeline {
     agent any
     
-    stages {        
-        stage('Build') {
-            steps {
-                sh 'mvn clean compile'
-            }
-        }
-        
-        stage('Unit Tests') {
-            when {
-                not { branch 'main' }
-            }
-            steps {
-                sh 'mvn test'
-            }
-        }
-        
-        stage('Code Coverage Test') {
-            when {
-                branch 'main'
-            }
-            steps {
-                sh 'mvn jacoco:check'
-            }
-        }
-    }
-    
-    post {
-        always {
-            junit 'target/surefire-reports/*.xml'
-        }
-    }
-}
-
-
-
-pipeline {
-    agent any
-    
     stages {
         stage('Example') {
             steps {
@@ -52,7 +14,7 @@ pipeline {
                         sh 'git clone https://github.com/dlambrig/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition.git'
                     
                             //sh 'cd Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/Chapter08/sample1/'
-                            sh 'Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/Chapter08/sample1'
+                            // sh 'Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition/Chapter08/sample1'
                             sh 'pwd'
                             sh 'ls -l'
                             //sh './gradlew jacocoTestCoverageVerification'
