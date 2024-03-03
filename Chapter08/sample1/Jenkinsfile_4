@@ -10,10 +10,8 @@ pipeline {
         //}
         stage('Example') {
             steps {
-                script{
-                    echo "THIS IS WEEK6 HOMEWORK!!!"
+                echo "THIS IS WEEK6 HOMEWORK!!!"
                 }
-            }
         }
     }
 }
@@ -23,8 +21,7 @@ pipeline {
         //        sh 'mvn test jacoco:report'
         //    }
         //}
-    }
-    
+        
 //    post {
 //        always {
             // Publish JaCoCo coverage report
